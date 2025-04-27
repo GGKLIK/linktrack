@@ -15,7 +15,7 @@ class Link(db.Model):
 def index():
     return render_template('index.html')
 
-@app.route('/track.py', methods=['POST'])
+@app.route('/linktrack/track.py', methods=['POST'])
 def create_link():
     original_url = request.form['url']
     tracking_id = str(uuid.uuid4())
